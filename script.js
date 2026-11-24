@@ -33,7 +33,7 @@ async function data(location) {
         );
 
         let weatherData = await response.json();
-
+        console.log(weatherData);
         if (!response.ok) {
             throw new Error(weatherData.error.message);
         }
@@ -173,7 +173,7 @@ function displayData(weatherData) {
 
                     <div
                         class="border border-slate-800 max-w-3xl font-semibold flex items-center gap-2 md:h-20 rounded-2xl px-4 p-2 m-2">
-                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9" src="sun.svg" alt="">
+                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9" src="Smoke.svg" alt="">
                         </div>Pressur_Mb: ${weatherData.current.pressure_mb}
                     </div>
 
@@ -195,13 +195,13 @@ function displayData(weatherData) {
 
                     <div
                         class="border border-slate-800 max-w-3xl font-semibold flex items-center gap-2 md:h-20 rounded-2xl px-4 p-2 m-2">
-                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9 scale-175" src="wind_kph.svg" alt="">
+                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9 scale-175" src="Overcast.svg" alt="">
                         </div>Wind_kph: ${weatherData.current.wind_kph}
                     </div>
 
                     <div
                         class="border border-slate-800 max-w-3xl font-semibold flex items-center gap-2 md:h-20 rounded-2xl px-4 p-2 m-2">
-                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9" src="sun.svg" alt="">
+                        <div class="border p-2 border-slate-800 rounded-2xl"><img class="h-9 w-9" src="mist file.svg" alt="">
                         </div>Wind_mph: ${weatherData.current.wind_mph}
                     </div>
 
