@@ -264,17 +264,8 @@
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-30 {
-    height: calc(var(--spacing) * 30);
-  }
   .h-40 {
     height: calc(var(--spacing) * 40);
-  }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
-  }
-  .h-75 {
-    height: calc(var(--spacing) * 75);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -291,20 +282,8 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
-  .w-30 {
-    width: calc(var(--spacing) * 30);
-  }
   .w-40 {
     width: calc(var(--spacing) * 40);
-  }
-  .w-60 {
-    width: calc(var(--spacing) * 60);
-  }
-  .w-75 {
-    width: calc(var(--spacing) * 75);
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
@@ -320,6 +299,12 @@
   }
   .max-w-sm {
     max-width: var(--container-sm);
+  }
+  .min-w-10 {
+    min-width: calc(var(--spacing) * 10);
+  }
+  .min-w-40 {
+    min-width: calc(var(--spacing) * 40);
   }
   .flex-1 {
     flex: 1;
@@ -403,10 +388,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
@@ -420,6 +401,9 @@
   }
   .border-\(--border\) {
     border-color: var(--border);
+  }
+  .border-black {
+    border-color: var(--color-black);
   }
   .border-black\/20 {
     border-color: color-mix(in srgb, #000 20%, transparent);
@@ -620,12 +604,6 @@
     color: var(--color-blue-400);
   }
   @media (width >= 48rem) {
-    .md\:ml-3 {
-      margin-left: calc(var(--spacing) * 3);
-    }
-    .md\:ml-9 {
-      margin-left: calc(var(--spacing) * 9);
-    }
     .md\:flex {
       display: flex;
     }
@@ -635,20 +613,8 @@
     .md\:h-50 {
       height: calc(var(--spacing) * 50);
     }
-    .md\:h-70 {
-      height: calc(var(--spacing) * 70);
-    }
-    .md\:h-75 {
-      height: calc(var(--spacing) * 75);
-    }
     .md\:w-50 {
       width: calc(var(--spacing) * 50);
-    }
-    .md\:w-70 {
-      width: calc(var(--spacing) * 70);
-    }
-    .md\:w-75 {
-      width: calc(var(--spacing) * 75);
     }
     .md\:max-w-72 {
       max-width: calc(var(--spacing) * 72);
@@ -676,9 +642,6 @@
     }
     .md\:gap-x-64 {
       column-gap: calc(var(--spacing) * 64);
-    }
-    .md\:p-2 {
-      padding: calc(var(--spacing) * 2);
     }
     .md\:p-16 {
       padding: calc(var(--spacing) * 16);
