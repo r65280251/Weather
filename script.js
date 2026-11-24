@@ -12,23 +12,38 @@ bttn.addEventListener("click", () =>{
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    if (formInput.value === "") {
-        return;
-    }
-
     let location = formInput.value.trim();
+
+    if (location === "") return;
+
     let weatherData = await data(location);
 
-    displayData(weatherData);
+    if (weatherData) {
+        displayData(weatherData);
+    }
 });
 
 
 
 async function data(location) {
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=0613b03039e74ca29ad165014262810&q=${location}&aqi=yes`)
-    let data = await response.json()
-    console.log(data);
-    return data;
+
+    try {
+        let response = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=0613b03039e74ca29ad165014262810&q=${encodeURIComponent(location)}&aqi=yes`
+        );
+
+        let weatherData = await response.json();
+
+        if (!response.ok) {
+            throw new Error(weatherData.error.message);
+        }
+
+        return weatherData;
+
+    } catch (error) {
+        console.log("API Error:", error);
+        return null;
+    }
 }
 
 
